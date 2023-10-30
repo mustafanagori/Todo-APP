@@ -8,10 +8,8 @@ class SaveButton extends StatelessWidget {
     required this.w,
     required this.todoController,
   });
-
   final double w;
   final TodoController todoController;
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
