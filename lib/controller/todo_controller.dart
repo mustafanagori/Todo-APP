@@ -38,6 +38,11 @@ class TodoController extends GetxController {
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
 
+  void clearTextFiled() {
+    titleController.clear();
+    descriptionController.clear();
+  }
+
   void add(Todo todo) {
     todos.add(todo);
   }
@@ -57,5 +62,6 @@ class TodoController extends GetxController {
       isCompleted: false,
     ));
     Get.back();
+    clearTextFiled();
   }
 }

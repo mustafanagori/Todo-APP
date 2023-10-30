@@ -16,7 +16,7 @@ class ViewItem extends StatelessWidget {
           child: ViewItemAppbar() // Use CustomAppBar here
           ),
       body: todoController.todos.isEmpty
-          ? Center(
+          ? const Center(
               child: Text("List is Empty"),
             )
           : Obx(() => ListView.builder(

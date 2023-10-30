@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_todo_list/controller/todo_controller.dart';
 
 class SaveButton extends StatelessWidget {
@@ -18,7 +19,12 @@ class SaveButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
         onPressed: () {
-          todoController.saveTodo();
+          if (todoController.titleController.text.isNotEmpty &&
+              todoController.descriptionController.text.isNotEmpty) {
+            todoController.saveTodo();
+          } else {
+            Get.snackbar("Alert", 'Kindly add the title and Description');
+          }
         },
         child: const Text(
           'Save',
