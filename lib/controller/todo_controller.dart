@@ -61,7 +61,7 @@ class TodoController extends GetxController {
       description: descriptionController.text,
       isCompleted: false,
     ));
+    print(todos.length);
     Get.back();
-    clearTextFiled();
   }
 }
