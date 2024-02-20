@@ -14,8 +14,9 @@ class ViewItemAppbar extends StatelessWidget {
       title: const Text(
         'TODO LIST',
         style: TextStyle(
-          color: Colors.white,
-        ),
+            color: Colors.white,
+            letterSpacing: 2,
+            fontWeight: FontWeight.normal),
       ),
     );
   }
